@@ -6,6 +6,7 @@ const sidebars = {
       type: 'category',
       label: 'Module 1: Robotic Nervous System',
       items: [
+        'module1/intro',
         'module1/ros2-nodes',
         'module1/urdf-guides',
       ],
