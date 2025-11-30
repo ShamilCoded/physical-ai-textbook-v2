@@ -1,11 +1,68 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* --- HERO SECTION STYLING --- */
+.heroBanner {
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* Keeps the 3D grid animation inside the header */
+}
+
+/* Make the Main Title Huge & Glowing */
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Pop against the moving grid */
+}
+
+/* Subtitle Styling */
+.heroBanner p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #e2e8f0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10; /* CRITICAL: Ensures the button is clickable over the animation */
+}
+
+/* --- FEATURES SECTION --- */
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
 }
 
+/* Remove the old SVG styles since we are using Emojis now */
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  display: none;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1.5rem;
+  }
+  
+  .heroBanner h1 {
+    font-size: 2.5rem;
+  }
+
+  .features {
+    padding: 2rem 0;
+  }
 }

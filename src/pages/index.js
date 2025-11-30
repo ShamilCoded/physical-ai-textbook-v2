@@ -8,7 +8,7 @@ import styles from './index.module.css';
 // --- CUSTOM FEATURE DATA ---
 const FeatureList = [
   {
-    title: 'Module 1: ROS 2 Core',
+    title: '🧠 Module 1: ROS 2 Core',
     description: (
       <>
         Master the <strong>Robotic Nervous System</strong>. Learn Nodes, Topics, and Services to control humanoid hardware.
@@ -16,15 +16,15 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Module 2: Simulation',
+    title: '🌐 Module 2: Simulation',
     description: (
       <>
-        Build <strong>Digital Twins</strong> in Gazebo and Unity. Simulate physics, gravity, and sensors before going real.
+        Build <strong>Digital Twins</strong> in Gazebo & Unity. Simulate physics, gravity, and sensors before going real.
       </>
     ),
   },
   {
-    title: 'Module 3: Physical AI',
+    title: '🤖 Module 3: Physical AI',
     description: (
       <>
         Deploy <strong>Embodied Intelligence</strong> using NVIDIA Isaac Sim and Vision-Language-Action (VLA) models.

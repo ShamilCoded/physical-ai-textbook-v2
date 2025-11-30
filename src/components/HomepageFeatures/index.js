@@ -4,42 +4,36 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '🧠 Module 1: ROS 2 Core',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Master the <strong>Robotic Nervous System</strong>. Learn Nodes, Topics, and Services to control humanoid hardware.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '🌐 Module 2: Simulation',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Build <strong>Digital Twins</strong> in Gazebo & Unity. Simulate physics, gravity, and sensors before going real.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '🤖 Module 3: Physical AI',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Deploy <strong>Embodied Intelligence</strong> using NVIDIA Isaac Sim and Vision-Language-Action (VLA) models.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* We removed the SVG icon here to keep it clean and simple with Emojis in the title */}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>

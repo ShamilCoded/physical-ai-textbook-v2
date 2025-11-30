@@ -30,8 +30,83 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* --- OPTIONAL: Make the Hero Banner look cool --- */
-.hero--primary {
-  /* Adds a subtle gradient to the main header */
-  background: linear-gradient(135deg, var(--ifm-color-primary-darkest), var(--ifm-color-primary));
+/* =========================================
+   UPGRADE 1: MOVING CYBER GRID ANIMATION
+   ========================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: #0f172a; /* Dark Blue Base */
+  color: white;
+}
+
+/* The Animated Grid */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: perspective(500px) rotateX(60deg);
+  animation: planeMove 5s linear infinite;
+  opacity: 0.5;
+}
+
+@keyframes planeMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 50px;
+  }
+}
+
+/* Ensure text sits ON TOP of the animation */
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================================
+   UPGRADE 2: GLASSMORPHISM CARDS
+   ========================================= */
+.padding-horiz--md {
+  background: rgba(255, 255, 255, 0.05); /* See-through white */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem !important;
+  margin: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Effect */
+.padding-horiz--md:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 100, 255, 0.2); /* Blue Glow */
+  border-color: var(--ifm-color-primary);
+}
+
+/* =========================================
+   UPGRADE 3: GLOWING BUTTON
+   ========================================= */
+.button--secondary.button--lg {
+  background: white;
+  color: #0f172a;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+.button--secondary.button--lg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+  background: #e2e8f0;
 }

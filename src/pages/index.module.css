@@ -4,20 +4,56 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 5rem 0;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Essential for containing the 3D grid animation */
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* Make the title huge and glowing */
+.heroBanner h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Pop against the grid */
+}
+
+.heroBanner p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10; /* Ensures the button is always clickable */
+}
+
+/* Spacing for the Module Cards section */
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 1.5rem;
+  }
+  
+  .heroBanner h1 {
+    font-size: 2.5rem;
+  }
+
+  .features {
+    padding: 2rem 0;
+  }
 }
