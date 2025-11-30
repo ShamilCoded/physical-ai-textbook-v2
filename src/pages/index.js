@@ -3,9 +3,46 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import styles from './index.module.css';
+
+// --- CUSTOM FEATURE DATA ---
+const FeatureList = [
+  {
+    title: 'Module 1: ROS 2 Core',
+    description: (
+      <>
+        Master the <strong>Robotic Nervous System</strong>. Learn Nodes, Topics, and Services to control humanoid hardware.
+      </>
+    ),
+  },
+  {
+    title: 'Module 2: Simulation',
+    description: (
+      <>
+        Build <strong>Digital Twins</strong> in Gazebo and Unity. Simulate physics, gravity, and sensors before going real.
+      </>
+    ),
+  },
+  {
+    title: 'Module 3: Physical AI',
+    description: (
+      <>
+        Deploy <strong>Embodied Intelligence</strong> using NVIDIA Isaac Sim and Vision-Language-Action (VLA) models.
+      </>
+    ),
+  },
+];
+
+function Feature({title, description}) {
+  return (
+    <div className={clsx('col col--4')}>
+      <div className="text--center padding-horiz--md">
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+}
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -18,7 +55,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Start the Course - 5min ⏱️
           </Link>
         </div>
       </div>
@@ -31,10 +68,18 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="Physical AI & Humanoid Robotics Textbook">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <section className={styles.features}>
+          <div className="container">
+            <div className="row" style={{marginTop: '2rem'}}>
+              {FeatureList.map((props, idx) => (
+                <Feature key={idx} {...props} />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );
