@@ -13,7 +13,7 @@ const config = {
   // Set the production url of your site here
   url: 'https://your-username.github.io', 
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/physical-ai-textbook/', 
+  baseUrl: '/', 
 
   // GitHub pages deployment config.
   organizationName: 'your-username', // CHANGE THIS to your GitHub username
